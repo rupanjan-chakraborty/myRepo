@@ -6,8 +6,8 @@ resource "aws_instance" "servers" {
     Name = "${each.key}"
   }
   root_block_device {
-    volume_size           = 20    # Size in GB, adjust as needed
-    volume_type           = "gp2" # General Purpose SSD
-    delete_on_termination = true  # Optional: delete the volume when the instance is terminated
+    volume_size           = 20
+    volume_type           = "gp2"
+    delete_on_termination = true
   }
 }
