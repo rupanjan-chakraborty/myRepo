@@ -12,14 +12,14 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker image...'
-                bat 'docker build -t hello-app:latest DevOps/'
+                sh 'docker build -t hello-app:latest DevOps/'
             }
         }
 
         stage('Deploy to Kubernetes') {
             steps {
                 echo 'Deploying to Kubernetes...'
-                bat 'helm upgrade --install hello-app DevOps/helm/hello-app'
+                sh 'helm upgrade --install hello-app DevOps/helm/hello-app'
             }
         }
     }
