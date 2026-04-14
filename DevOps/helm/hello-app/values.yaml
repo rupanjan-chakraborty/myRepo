@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: hello-app
   tag: latest
-  pullPolicy: Never
+  pullPolicy: Always
 
 service:
   type: NodePort
